@@ -8,7 +8,7 @@
 
 	<display-name>skalada</display-name>
 	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>home</welcome-file>
 	</welcome-file-list>
 	<servlet>
     <description>Login para entrar la backoffice</description>
