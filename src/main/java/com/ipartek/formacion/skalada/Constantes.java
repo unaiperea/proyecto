@@ -18,8 +18,8 @@ public final class Constantes {
 		super();
 	}
 
-	public static final String SERVER =  "http://54.86.73.64:15005"; //"http://proyecto-eskalada.rhcloud.com:8080"; //"http://localhost:8080";
-	public static final String ROOT_APP = "/skalada/"; //"/"; //"/skalada/";
+	public static final String SERVER =  ""; //"http://proyecto-eskalada.rhcloud.com:8080"; //"http://localhost:8080";
+	public static final String ROOT_APP = "/"; //"/"; //"/skalada/";
 	public static final String APP_NAME = "proyecto"; //"skalada";
 //fg
 	// vistas publicas
