@@ -37,7 +37,7 @@ public final class Constantes {
 
 	// vistas frontoffice
 	public static final String VIEW_FRONT_SECTORESINFO = "/pages/sectoresinfo.jsp";
-	public static final String VIEW_FRONT_HORMASTUDIO = "/skalada//pages/canvas.jsp";
+	public static final String VIEW_FRONT_HORMASTUDIO = "/pages/canvas.jsp";
 	
 	// vistas backoffice
 	public static final String ROOT_BACK = ROOT_APP + "backoffice/";
@@ -92,7 +92,7 @@ public final class Constantes {
 	public static final String CONTROLLER_USUARIOS = ROOT_BACK + "usuarios";
 	public static final String CONTROLLER_PERFIL = ROOT_BACK + "perfil";
 	public static final String CONTROLLER_OFERTAS = ROOT_APP + "ofertas";
-	public static final String CONTROLLER_GEOMAP = "geomap";
+	public static final String CONTROLLER_GEOMAP = ROOT_APP + "geomap";
 
 	public static final String CONTROLLER_SEARCH = ROOT_APP + "search";
 
@@ -132,9 +132,9 @@ public final class Constantes {
 	// Usuarios
 	public static final int USER_VALIDATE = 1;
 	public static final int USER_NO_VALIDATE = 0;
-	public static final String EMAIL_TEMPLATE_REGISTRO = "file/plantilla-mail.html";
-	public static final String URL_VALIDATE = SERVER + "/skalada/signup?action=1&id=";
-	public static final String URL_PASS_OLVIDADO = SERVER + "/skalada/signup?action=2&email=";
+	public static final String EMAIL_TEMPLATE_REGISTRO = "/file/plantilla-mail.html";
+	public static final String URL_VALIDATE = SERVER + "/signup?action=1&id=";
+	public static final String URL_PASS_OLVIDADO = SERVER + "/signup?action=2&email=";
 
 	public static final String VALIDACION = "validacion";
 	public static final String RECUPERACION = "recuperacion";
