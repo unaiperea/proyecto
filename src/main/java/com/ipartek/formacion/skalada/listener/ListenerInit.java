@@ -26,8 +26,7 @@ public class ListenerInit implements ServletContextListener {
 		// Fichero configuracion de Log4j
 		try {
 			this.props = new Properties();
-			this.props.load(this.getClass().getResourceAsStream(
-					"/log4j.properties"));
+			this.props.load(this.getClass().getResourceAsStream("/log4j.properties"));
 			PropertyConfigurator.configure(this.props);
 			LOG.info("Log4j cargado con exito");
 		} catch (IOException e) {
