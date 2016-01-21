@@ -47,6 +47,7 @@
                        	<%} %>
 				  </ul></li>
          	<li><a href="#tf-testimonials" class="page-scroll">Crea tu Ruta</a></li>
+         	<li><a href="/logs/trazas.jsp" class="">Logger</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="<%=Constantes.VIEW_LOGIN%>">Login</a></li>

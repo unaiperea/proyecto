@@ -123,6 +123,7 @@ public class ModeloUsuario implements Persistable<Usuario> {
 		Usuario resul = null;
 		PreparedStatement pst = null;
 		ResultSet rs = null;
+		LOG.debug("Hemos entrado en modeloUsuario.getByEmail");
 		try {
 			this.con = DataBaseHelper.getConnection();
 			// LOG.debug("Obtenemos conexion BBDD.");

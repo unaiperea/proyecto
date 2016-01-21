@@ -10,9 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.Logger;
+
 import com.ipartek.formacion.skalada.Constantes;
 import com.ipartek.formacion.skalada.bean.Usuario;
 import com.ipartek.formacion.skalada.bean.Zona;
+import com.ipartek.formacion.skalada.modelo.DataBaseHelper;
 import com.ipartek.formacion.skalada.modelo.ModeloSector;
 import com.ipartek.formacion.skalada.modelo.ModeloUsuario;
 import com.ipartek.formacion.skalada.modelo.ModeloZona;
@@ -25,6 +28,8 @@ import com.ipartek.formacion.skalada.modelo.ModeloZona;
 public class HomeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	private static final Logger LOG = Logger.getLogger(DataBaseHelper.class);
+	
 	private HttpSession session = null;
 	private ModeloSector modeloSector = null;
 	private Usuario usuario = null;
@@ -63,9 +68,11 @@ public class HomeController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		LOG.debug("Ha entrado en HomeController");
 		// recuperar las ultimas 6 sectores del modelo
 		// TODO usar LIMIT en la select y order bu id desc
 		this.usuario = (Usuario) this.modeloUsuario.getByEmail("admin@admin.com");
+		LOG.debug("Hemos obtenido el usuario por email");
 		this.session = request.getSession(true);
 		this.session.setAttribute("admin", this.usuario);
 		ArrayList<Zona> zonas = this.modeloZona.getAll(this.usuario);

@@ -48,10 +48,12 @@ public class DataBaseHelper {
 		 * DATA_BASE, USER, PASS); } return con;
 		 */
 
+		LOG.debug("Entramos en getConnection");
 		/* Conexion usando DataSource y PoolConexiones */
 		Connection con = null;
 		InitialContext ctx = new InitialContext();
 		DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/skaladaDB");
+		LOG.debug("Después de DataSource");
 		if (ds == null) {
 			throw new Exception("Data source no encontrado!");
 		} else {
