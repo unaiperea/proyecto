@@ -55,6 +55,7 @@ public class DataBaseHelper {
 		DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/skaladaDB");
 		LOG.info("Después de DataSource");
 		if (ds == null) {
+			LOG.info("DataSource ds=null");
 			throw new Exception("Data source no encontrado!");
 		} else {
 			con = ds.getConnection();
