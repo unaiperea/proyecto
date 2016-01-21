@@ -60,6 +60,7 @@ public class DataBaseHelper {
 		} else {
 			LOG.info("Obtenemos conexion BBDD.");
 			con = ds.getConnection();
+			LOG.info("No casca al obtener conexion BBDD.");
 		}
 		LOG.info("antes de comprobar con");
 		if (con == null) {
