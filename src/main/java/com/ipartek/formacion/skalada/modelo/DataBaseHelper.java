@@ -53,20 +53,20 @@ public class DataBaseHelper {
 		Connection con = null;
 		InitialContext ctx = new InitialContext();
 		DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/skaladaDB");
-		LOG.info("Después de DataSource");
+		LOG.info("Después de DataSource. " + ctx.lookup("java:comp/env/jdbc/skaladaDB").toString());
 		if (ds == null) {
 			LOG.info("DataSource ds=null");
 			throw new Exception("Data source no encontrado!");
 		} else {
-			con = ds.getConnection();
 			LOG.info("Obtenemos conexion BBDD.");
+			con = ds.getConnection();
 		}
-
+		LOG.info("antes de comprobar con");
 		if (con == null) {
 			LOG.info("Error al establecer conexion.");
 			throw new Exception("No se ha podido establecer conexion BBDD");
 		}
-
+		LOG.info("fin de getConnection");
 		return con;
 	}
 

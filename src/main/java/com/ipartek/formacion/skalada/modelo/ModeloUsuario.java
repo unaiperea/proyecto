@@ -134,6 +134,7 @@ public class ModeloUsuario implements Persistable<Usuario> {
 				resul = this.mapeo(rs);
 			}
 		} catch (Exception e) {
+			LOG.info("error: " + e);
 			e.printStackTrace();
 		} finally {
 			try {
