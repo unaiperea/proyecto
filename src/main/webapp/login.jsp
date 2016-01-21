@@ -61,10 +61,10 @@
 							</div>
 							<input class="btn btn-lg btn-block btn-primary-login" type="submit"
 								value="Login" style="border-radius:25px; margin-bottom:10px">
-								<a class="link" href="recupera-pass.jsp" style="margin-left: -125px;">¿Has olvidado tu contraseña?</a>
+								<a class="link" href="recupera-pass.jsp" style="margin-left: -125px;">�Has olvidado tu contrase�a?</a>
 								<br>
 								<br>
-							<a href="<%=Constantes.VIEW_SIGNUP%>" class="btn btn-lg btn-block btn-primary-login" style="border-radius:25px;margin-bottom: 25px;">¿Aún no estás registrado?</a>
+							<a href="<%=Constantes.VIEW_SIGNUP%>" class="btn btn-lg btn-block btn-primary-login" style="border-radius:25px;margin-bottom: 25px;">A&uacute;n no est&Aacute;s registrado?</a>
 						</fieldset>
 					</form>
 				</div>
