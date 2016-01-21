@@ -69,25 +69,32 @@ public class LoginController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		LOG.info("ha entrado en LoginController");
 		// recoger la sesion
 		this.session = request.getSession(true);
 		Usuario user_session = (Usuario) this.session.getAttribute(Constantes.KEY_SESSION_USER);
 
+		LOG.info("Ha leido la sesion");
 		// Usuario logeado
 		if ((user_session != null) && "".equals(user_session.getNombre())) {
+			LOG.info("Comprueba y envia a index_back.jsp");
 			// Ir a => index_back.jsp
 			this.dispatcher = request.getRequestDispatcher(Constantes.VIEW_BACK_INDEX);
 
 			// Usuario No logeado o caducada session
 		} else {
+			LOG.info("Comprueba y continua");
 			// recoger parametros del formulario
 			this.getParameters(request);
 
+			LOG.info("Va a comprobar el email usando ModeloUsuario.getByEmail()");
 			// validar los datos
 			// comprobamos con la BBDD
 
 			this.usuario = MODELOUSUARIO.getByEmail(this.pEmail);
+			LOG.info("Ha cogido el usuario");
 			if (this.usuario != null) {
+				LOG.info("Usuario: " + usuario.getNombre());
 				if (this.usuario.getEmail().equals(this.pEmail) && this.usuario.getPassword().equals(this.pPassword)) {
 					if (this.usuario.isValidado()) {
 						// salvar session
@@ -107,6 +114,7 @@ public class LoginController extends HttpServlet {
 					LOG.warn("Usuario: " + usuario.getNombre() + "[id:" + usuario.getId() + "] Contraseña incorrecta.");
 				}
 			} else {
+				LOG.info("El usuario es null");
 				this.msg = new Mensaje(Mensaje.MSG_WARNING, "El usuario no existe, si lo desea registrese.");
 				this.dispatcher = request.getRequestDispatcher(Constantes.VIEW_SIGNUP);
 				LOG.warn("Intento de inicio de sesion de usuario no registrado.");
