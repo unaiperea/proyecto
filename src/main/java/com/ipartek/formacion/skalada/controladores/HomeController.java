@@ -73,7 +73,6 @@ public class HomeController extends HttpServlet {
 		// TODO usar LIMIT en la select y order bu id desc
 		this.usuario = (Usuario) this.modeloUsuario.getByEmail("admin@admin.com");
 		LOG.info("Hemos obtenido el usuario por email");
-		LOG.info("Usuario: " + usuario.getNombre());
 		this.session = request.getSession(true);
 		this.session.setAttribute("admin", this.usuario);
 		ArrayList<Zona> zonas = this.modeloZona.getAll(this.usuario);
