@@ -49,7 +49,7 @@ public class ModeloUsuario implements Persistable<Usuario> {
 		if (u != null) {
 			try {
 				this.con = DataBaseHelper.getConnection();
-				// LOG.debug("Obtenemos conexion BBDD.");
+				LOG.info("Obtenemos conexion BBDD.");
 				pst = this.con.prepareStatement(SQL_INSERT,
 						Statement.RETURN_GENERATED_KEYS);
 				pst.setString(1, u.getEmail());
@@ -94,7 +94,7 @@ public class ModeloUsuario implements Persistable<Usuario> {
 		ResultSet rs = null;
 		try {
 			this.con = DataBaseHelper.getConnection();
-			// LOG.debug("Obtenemos conexion BBDD.");
+			LOG.info("Obtenemos conexion BBDD.");
 			pst = this.con.prepareStatement(SQL_GETONE);
 			pst.setInt(1, id);
 			rs = pst.executeQuery();
@@ -123,10 +123,10 @@ public class ModeloUsuario implements Persistable<Usuario> {
 		Usuario resul = null;
 		PreparedStatement pst = null;
 		ResultSet rs = null;
-		LOG.debug("Hemos entrado en modeloUsuario.getByEmail");
+		LOG.info("Hemos entrado en modeloUsuario.getByEmail");
 		try {
 			this.con = DataBaseHelper.getConnection();
-			// LOG.debug("Obtenemos conexion BBDD.");
+			LOG.info("Obtenemos conexion BBDD.");
 			pst = this.con.prepareStatement(SQL_GET_BY_EMAIL);
 			pst.setString(1, email);
 			rs = pst.executeQuery();
@@ -158,7 +158,7 @@ public class ModeloUsuario implements Persistable<Usuario> {
 		ResultSet rs = null;
 		try {
 			this.con = DataBaseHelper.getConnection();
-			// LOG.debug("Obtenemos conexion BBDD.");
+			LOG.info("Obtenemos conexion BBDD.");
 			pst = this.con.prepareStatement(SQL_GETALL);
 			rs = pst.executeQuery();
 			while (rs.next()) {
@@ -188,7 +188,7 @@ public class ModeloUsuario implements Persistable<Usuario> {
 		ResultSet rs = null;
 		try {
 			this.con = DataBaseHelper.getConnection();
-			// LOG.debug("Obtenemos conexion BBDD.");
+			LOG.info("Obtenemos conexion BBDD.");
 			pst = this.con.prepareStatement(SQL_GETNOVALIDADOS);
 			rs = pst.executeQuery();
 			while (rs.next()) {
@@ -219,7 +219,7 @@ public class ModeloUsuario implements Persistable<Usuario> {
 		if (u != null) {
 			try {
 				this.con = DataBaseHelper.getConnection();
-				// LOG.debug("Obtenemos conexion BBDD.");
+				LOG.info("Obtenemos conexion BBDD.");
 				String sql = SQL_UPDATE;
 				pst = this.con.prepareStatement(sql);
 				pst.setString(1, u.getEmail());
@@ -258,7 +258,7 @@ public class ModeloUsuario implements Persistable<Usuario> {
 		PreparedStatement pst = null;
 		try {
 			this.con = DataBaseHelper.getConnection();
-			// LOG.debug("Obtenemos conexion BBDD.");
+			LOG.info("Obtenemos conexion BBDD.");
 			pst = this.con.prepareStatement(SQL_DELETE);
 			pst.setInt(1, id);
 			if (pst.executeUpdate() == 1) {
@@ -322,7 +322,7 @@ public class ModeloUsuario implements Persistable<Usuario> {
 		ResultSet rs = null;
 		try {
 			this.con = DataBaseHelper.getConnection();
-			// LOG.debug("Obtenemos conexion BBDD.");
+			LOG.info("Obtenemos conexion BBDD.");
 			pst = this.con.prepareStatement(SQL_CHECK_USER);
 			pst.setString(1, nombre);
 			pst.setString(2, email);
@@ -365,7 +365,7 @@ public class ModeloUsuario implements Persistable<Usuario> {
 		ResultSet rs = null;
 		try {
 			this.con = DataBaseHelper.getConnection();
-			// LOG.debug("Obtenemos conexion BBDD.");
+			LOG.info("Obtenemos conexion BBDD.");
 			pst = this.con.prepareStatement(SQL_CHECK_EMAIL);
 			pst.setString(1, email);
 			rs = pst.executeQuery();
@@ -398,7 +398,7 @@ public class ModeloUsuario implements Persistable<Usuario> {
 		PreparedStatement pst = null;
 		try {
 			this.con = DataBaseHelper.getConnection();
-			// LOG.debug("Obtenemos conexion BBDD.");
+			LOG.info("Obtenemos conexion BBDD.");
 			String sql = SQL_VALIDATE;
 			pst = this.con.prepareStatement(sql);
 			pst.setInt(1, 1);
@@ -428,7 +428,7 @@ public class ModeloUsuario implements Persistable<Usuario> {
 		PreparedStatement pst = null;
 		try {
 			this.con = DataBaseHelper.getConnection();
-			// LOG.debug("Obtenemos conexion BBDD.");
+			LOG.info("Obtenemos conexion BBDD.");
 			String sql = SQL_RESET_PASS;
 			pst = this.con.prepareStatement(sql);
 			pst.setString(1, pass);
@@ -459,7 +459,7 @@ public class ModeloUsuario implements Persistable<Usuario> {
 		Connection con = null;
 		try {
 			con = DataBaseHelper.getConnection();
-			// LOG.debug("Obtenemos conexion BBDD.");
+			LOG.info("Obtenemos conexion BBDD.");
 			pst = con.prepareStatement(SQL_USUARIOS_NO_VALIDADOS);
 			rs = pst.executeQuery();
 			while (rs.next()) {
@@ -490,7 +490,7 @@ public class ModeloUsuario implements Persistable<Usuario> {
 		ResultSet rs = null;
 		try {
 			this.con = DataBaseHelper.getConnection();
-			// LOG.debug("Obtenemos conexion BBDD.");
+			LOG.info("Obtenemos conexion BBDD.");
 			pst = this.con.prepareStatement(SQL_BUSQUEDA);
 			pst.setString(1, "%" + texto + "%");
 			pst.setString(2, "%" + texto + "%");
