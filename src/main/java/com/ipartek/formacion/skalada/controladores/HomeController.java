@@ -68,7 +68,7 @@ public class HomeController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		LOG.info("Ha entrado en HomeController");
+		LOG.info("Ha entrado en HomeController. OEOEOE");
 		// recuperar las ultimas 6 sectores del modelo
 		// TODO usar LIMIT en la select y order bu id desc
 		this.usuario = (Usuario) this.modeloUsuario.getByEmail("admin@admin.com");
