@@ -10,7 +10,7 @@
 				username="adminDb6KScN" 
 				password="wYs6hwezUrPW" 
 				driverClassName="com.mysql.jdbc.Driver"
-				url="jdbc:mysql://adminDb6KScN:wYs6hwezUrPW@127.12.91.130:3306/proyecto"
+				url="jdbc:mysql://127.12.91.130:3306/proyecto"
 	/>
 	
 	<!-- url="jdbc:mysql://127.12.91.131:8080/proyecto" -->
