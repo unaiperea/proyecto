@@ -4,13 +4,13 @@
 	<Resource   name="jdbc/skaladaDB"
 			    auth="Container" 
 				type="javax.sql.DataSource"
-				maxActive="50" 
+				maxActive="100" 
 				maxIdle="3" 
-				maxWait="10000"
+				maxWait="100000"
 				username="adminDb6KScN" 
 				password="wYs6hwezUrPW" 
 				driverClassName="com.mysql.jdbc.Driver"
-				url="jdbc:mysql://565f63752d52712dcc000029@proyecto-eskalada.rhcloud.com:3306/proyecto"
+				url="jdbc:mysql://127.12.91.130:3306/proyecto?connectTimeout=100000"
 	/>
 	
 	<!-- url="jdbc:mysql://127.12.91.131:8080/proyecto" -->
@@ -18,6 +18,7 @@
 	<!-- url="jdbc:mysql://127.12.91.130:18162/proyecto" -->
 	<!-- url="jdbc:mysql://localhost:3306/eskalada"-->
 	<!-- url="jdbc:mysql://127.12.91.130:3306/proyecto" -->
+	<!-- url="jdbc:mysql://565f63752d52712dcc000029@proyecto-eskalada.rhcloud.com:3306/proyecto" -->
 	
 	 
 </Context>
