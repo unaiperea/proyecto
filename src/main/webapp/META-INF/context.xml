@@ -4,15 +4,18 @@
 	<Resource   name="jdbc/skaladaDB"
 			    auth="Container" 
 				type="javax.sql.DataSource"
-				maxActive="100" 
-				maxIdle="3" 
+				characterEncoding="UTF-8"
+				maxActive="250" 
+				maxIdle="5" 
 				maxWait="100000"
 				username="adminDb6KScN" 
 				password="wYs6hwezUrPW" 
 				driverClassName="com.mysql.jdbc.Driver"
-				url="jdbc:mysql://127.12.91.130:3306/proyecto?connectTimeout=100000"
+				factory="org.apache.commons.dbcp.BasicDataSourceFactory"
+				url="jdbc:mysql://127.12.91.130:3306/proyecto?autoReconnect"
 	/>
 	
+	<!-- url="jdbc:mysql://adminDb6KScN:wYs6hwezUrPW@127.12.91.130:3306/proyecto -->
 	<!-- url="jdbc:mysql://127.12.91.131:8080/proyecto" -->
 	<!-- url="jdbc:mysql://adminDb6KScN:wYs6hwezUrPW@127.12.91.130:3306/proyecto" -->
 	<!-- url="jdbc:mysql://127.12.91.130:18162/proyecto" -->
