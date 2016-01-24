@@ -8,7 +8,7 @@
 		type="javax.sql.DataSource"
 		driverClassName="com.mysql.jdbc.Driver" 
 		factory="org.apache.commons.dbcp.BasicDataSourceFactory" 
-		url="jdbc:mysql://127.12.91.130:3306/eskalada?autoReconnect"
+		url="jdbc:mysql://proyecto-eskalada.rhcloud.com/:3306/eskalada?autoReconnect"
 		username="adminDb6KScN"
 		password="wYs6hwezUrPW"
 		useUnicode="true"
@@ -16,11 +16,11 @@
 		validationQuery="SELECT 1"
 		maxActive="50" 
 		maxIdle="5" 
-		maxWait="10000"
+		maxWait="100000"
 		minEvictableIdleTimeMillis="60000" 			 
 		testOnBorrow="true" 
 		testWhileIdle="true" 
-		timeBetweenEvictionRunsMillis="10000"
+		timeBetweenEvictionRunsMillis="100000"
 	/>
 	
 <!-- 	<Resource   name="jdbc/skaladaDB" -->
