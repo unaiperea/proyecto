@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context> 
 
-	<Resource   
+<!-- 	<Resource    -->
 	
-		name="jdbc/skaladaDB" 
-		auth="Container" 
-		type="javax.sql.DataSource"
-		driverClassName="com.mysql.jdbc.Driver" 
-		factory="org.apache.commons.dbcp.BasicDataSourceFactory" 
-		url="jdbc:mysql://adminDb6KScN:wYs6hwezUrPW@127.12.91.130:3306/proyecto?autoReconnect"
-		useUnicode="true"
-		characterEncoding="UTF-8"		
-		validationQuery="SELECT 1"
-		maxActive="50" 
-		maxIdle="5" 
-		maxWait="100000"
-		minEvictableIdleTimeMillis="60000" 			 
-		testOnBorrow="true" 
-		testWhileIdle="true" 
-		timeBetweenEvictionRunsMillis="100000"
-	/>
-	
-<!-- 	<Resource   name="jdbc/skaladaDB" -->
-<!-- 			    auth="Container"  -->
-<!-- 				type="javax.sql.DataSource" -->
-<!-- 				maxActive="50"  -->
-<!-- 				maxIdle="3"  -->
-<!-- 				maxWait="10000" -->
-<!-- 				username="adminDb6KScN"  -->
-<!-- 				password="wYs6hwezUrPW"  -->
-<!-- 				driverClassName="com.mysql.jdbc.Driver" -->
-<!-- 				url="jdbc:mysql://127.12.91.130:3306/proyecto" -->
+<!-- 		name="jdbc/skaladaDB"  -->
+<!-- 		auth="Container"  -->
+<!-- 		type="javax.sql.DataSource" -->
+<!-- 		driverClassName="com.mysql.jdbc.Driver"  -->
+<!-- 		factory="org.apache.commons.dbcp.BasicDataSourceFactory"  -->
+<!-- 		url="jdbc:mysql://adminDb6KScN:wYs6hwezUrPW@127.12.91.130:3306/proyecto?autoReconnect" -->
+<!-- 		useUnicode="true" -->
+<!-- 		characterEncoding="UTF-8"		 -->
+<!-- 		validationQuery="SELECT 1" -->
+<!-- 		maxActive="50"  -->
+<!-- 		maxIdle="5"  -->
+<!-- 		maxWait="100000" -->
+<!-- 		minEvictableIdleTimeMillis="60000" 			  -->
+<!-- 		testOnBorrow="true"  -->
+<!-- 		testWhileIdle="true"  -->
+<!-- 		timeBetweenEvictionRunsMillis="100000" -->
 <!-- 	/> -->
+	
+	<Resource   name="jdbc/skaladaDB"
+			    auth="Container" 
+				type="javax.sql.DataSource"
+				maxActive="50" 
+				maxIdle="3" 
+				maxWait="10000"
+				username="adminDb6KScN" 
+				password="wYs6hwezUrPW" 
+				driverClassName="com.mysql.jdbc.Driver"
+				url="jdbc:mysql://127.12.91.130:3306/proyecto"
+	/>
 	
 	<!-- url="jdbc:mysql://adminDb6KScN:wYs6hwezUrPW@127.12.91.130:3306/proyecto -->
 	<!-- url="jdbc:mysql://127.12.91.131:8080/proyecto" -->
