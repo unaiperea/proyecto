@@ -52,8 +52,8 @@ public class DataBaseHelper {
 		/* Conexion usando DataSource y PoolConexiones */
 		Connection con = null;
 		InitialContext ctx = new InitialContext();
-		DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/skaladaDB");
-		LOG.info("Después de DataSource. " + ctx.lookup("java:comp/env/jdbc/skaladaDB").toString());
+		DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/proyecto"); //java:comp/env/jdbc/skaladaDB
+		LOG.info("Después de DataSource. " + ctx.lookup("java:comp/env/jdbc/proyecto").toString());
 		if (ds == null) {
 			LOG.info("DataSource ds=null");
 			throw new Exception("Data source no encontrado!");
