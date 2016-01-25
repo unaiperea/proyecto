@@ -7,7 +7,7 @@
 		type="javax.sql.DataSource"
 		driverClassName="com.mysql.jdbc.Driver" 
 		factory="org.apache.commons.dbcp.BasicDataSourceFactory" 
-		url="jdbc:mysql://127.12.91.130:3306/proyecto?autoReconnect"
+		url="jdbc:mysql://127.12.91.130:3306/eskalada?autoReconnect"
 		username="adminDb6KScN" 
 		password="wYs6hwezUrPW" 
 		useUnicode="true"
