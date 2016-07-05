@@ -472,7 +472,7 @@ public class ModeloSector implements Persistable<Sector> {
 		try {
 			this.con = DataBaseHelper.getConnection();
 			pst = this.con.prepareStatement(SQL_BUSQUEDA);
-			pst.setString(1, "%" + texto + "%");
+			pst.setString(1, "%" + texto + "%"); //faltan comillas simples???
 			rs = pst.executeQuery();
 			while (rs.next()) {
 				resul.add(this.mapeo(rs));

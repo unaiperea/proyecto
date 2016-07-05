@@ -26,11 +26,11 @@
 				type="javax.sql.DataSource"
 				maxActive="50" 
 				maxIdle="3" 
-				maxWait="10000"
+				maxWait="15000"
 				username="adminDb6KScN" 
 				password="wYs6hwezUrPW" 
 				driverClassName="com.mysql.jdbc.Driver"
-				url="jdbc:mysql://127.12.91.130:3306/proyecto"
+				url="jdbc:mysql://127.12.91.130:3306/proyecto?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf8-&amp;mysqlEncoding=utf8"
 	/>
 	
 	<!-- url="jdbc:mysql://adminDb6KScN:wYs6hwezUrPW@127.12.91.130:3306/proyecto -->

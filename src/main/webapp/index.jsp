@@ -126,7 +126,8 @@
                             </div>
                         </div>
                         <br>
-                        <a href="<%=Constantes.VIEW_FRONT_HORMASTUDIO%>">Horma Studio</a>
+<%--                         <a href="<%=Constantes.VIEW_FRONT_HORMASTUDIO%>">Horma Studio</a> --%>
+                        <a href="http://studio-horma.rhcloud.com/">Horma Studio</a>
                     </div>
                 </div>
             </div>
